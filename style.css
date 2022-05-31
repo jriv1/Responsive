@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+body{
+    min-height: 100vh;
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0,0,0, .1);
+    padding: 20px 7%;
+    display: flex;
+
+    align-items: center;
+    justify-content:space-between;
+    z-index: 1000;
+
+}
+
+header .brand{
+
+   font-weight: bolder;
+   font-size: 1.5rem;
+   color: rgb(30, 30, 30) ;
+   transition: all 200ms;
+
+  
+}
+/* header .brand:hover,
+header .brand:focus-within{
+      background-color: rgb(220, 220, 220);
+      padding: 16px;
+      border-radius: 5px;
+
+    
+    
+ 
+
+} */
+
+header  ul{
+    list-style: none;
+}
+header ul li{
+    position: relative;
+    float:left;
+}
+header ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: rgb(40, 40, 40);
+    display: block;
+    transition: all 200ms;
+    
+}
+header ul li a:hover{
+    background-color: rgb(220, 220, 220);
+    border-radius: 5px;
+   
+
+}
+header ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background:white;
+    display: none;
+ 
+}
+
+header ul li:hover > ul,
+header ul li:focus-within > ul{
+    display: initial;
+}
+
+header ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgb(192, 192, 192);
+
+}
+
+
+header ul li ul li ul{
+ 
+    top: 60px;
+   
+}
+.togglebtn{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.25rem;
+   display: none;
+    flex-direction:column ;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+
+    }
+.togglebtn .bar
+{
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+
+@media(max-width:500px){
+.togglebtn{
+    display: flex;
+
+}
+header {
+  flex-direction:column ;
+  align-items: flex-start;
+  box-shadow: 0 5px 10px rgba(0,0,0, .1);
+}
+header ul {
+    display: flex;
+    flex-direction: column;
+    
+}
+header  ul {
+    width:100%;
+    margin-right: 0;
+    text-align: center;
+    
+    
+}
+/* header ul li{
+    display: none;
+} */
+.l{
+   width: 100%;
+   display: none;
+}
+.l.active{
+    display: flex;
+}
+
+header ul li ul{
+     display: none;
+}
+
+header ul li:hover > ul,
+header ul li:focus-within > ul{
+    display: none;
+}
+
+/* header ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgb(192, 192, 192);
+
+} */
+
+
+
+}
